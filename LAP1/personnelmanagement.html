@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>ex5</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
+        nav { background: #222; color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .container { background: white; padding: 20px; margin-top: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border-bottom: 1px solid #eee; padding: 12px; text-align: left; }
+        .btn-add { background: #007bff; color: white; border: none; padding: 8px 15px; border-radius: 4px; float: right; }
+        .btn-edit { background: #ffc107; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
+        .btn-delete { background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
+        .modal { width: 500px; background: white; border: 1px solid #ccc; margin: 30px auto; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .modal-header { background: #007bff; color: white; padding: 10px; }
+        .modal-body { padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div>
+            <strong>HR Management</strong> &nbsp;&nbsp; Home &nbsp; Contact
+        </div>
+        <div>
+            <input type="text" placeholder="Search..">
+            <button style="background: #333; color: white; border: 1px solid #555;">Search</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <button class="btn-add">+ Add</button>
+        <h2>Employee</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Fatima Beatriz</td>
+                    <td>Fatima Beatriz@gmail.com</td>
+                    <td>0985674321</td>
+                    <td>Staff</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Gabriel Hanna</td>
+                    <td>Gabriel Hanna@gmail.com</td>
+                    <td>0353674231</td>
+                    <td>Staff</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal">
+        <div class="modal-header">
+            New Employee <span style="float: right; cursor: pointer;">&times;</span>
+        </div>
+        <form class="modal-body">
+            <div>
+                <label>Name</label><br>
+                <input type="text" style="width: 90%;">
+            </div>
+            <div>
+                <label>Email</label><br>
+                <input type="email" style="width: 90%;">
+            </div>
+            <div>
+                <label>Phone</label><br>
+                <input type="text" style="width: 90%;">
+            </div>
+            <div>
+                <label>Position</label><br>
+                <select style="width: 95%;">
+                    <option>-- Select Position --</option>
+                    <option>Staff</option>
+                    <option>Manager</option>
+                    <option>CEO</option>
+                </select>
+            </div>
+            <div style="grid-column: span 2;">
+                <label>Sex</label><br>
+                <input type="radio" name="sex"> Male 
+                <input type="radio" name="sex"> Female
+            </div>
+            <div style="grid-column: span 2; text-align: right; border-top: 1px solid #eee; padding-top: 10px;">
+                <button type="submit" style="background: #198754; color: white; border: none; padding: 5px 15px;">Save</button>
+                <button type="button" style="background: #6c757d; color: white; border: none; padding: 5px 15px;">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
