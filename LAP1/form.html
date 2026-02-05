@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 13px; line-height: 1.6; }
+        fieldset { border: none; border-top: 1px solid #ccc; margin-bottom: 20px; padding-top: 10px; }
+        legend { font-weight: bold; font-size: 15px; }
+        .row { display: flex; margin-bottom: 5px; align-items: center; }
+        label { width: 150px; display: inline-block; font-weight: bold; }
+        input[type="text"], input[type="email"], select, textarea { width: 400px; padding: 2px; }
+        .note-box { border: 1px solid #ccc; padding: 10px; width: 400px; }
+        .captcha-text { font-family: "Courier New", monospace; font-size: 20px; letter-spacing: 5px; border: 1px dashed #000; padding: 5px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <fieldset>
+        <legend>Basic Info</legend>
+        <div class="row"><label>Employee ID</label> 9</div>
+        <div class="row"><label>Last Name</label> Dodsworth</div>
+        <div class="row">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" value="Anne">
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div>
+                <input type="radio" name="gender"> Male<br>
+                <input type="radio" name="gender"> Female<br>
+                <input type="radio" name="gender"> XXX<br>
+                <input type="radio" name="gender" checked> ZZZ
+            </div>
+        </div>
+        <div class="row"><label>Title</label> <input type="text" value="Sales Representative"></div>
+        <div class="row"><label>Suffix</label> <input type="text" value="Ms."></div>
+        <div class="row"><label>BirthDate</label> <input type="text" value="1969-07-02 00:00:00"> (?)</div>
+        <div class="row"><label>HireDate</label> <input type="text" value="1994-11-15 00:00:00"></div>
+        <div class="row">
+            <label>Reports To</label>
+            <select>
+                <option>Buchanan</option>
+                <option>Other</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Info</legend>
+        <div class="row"><label>Email</label> <input type="email" placeholder="name@example.com"></div>
+        <div class="row"><label>Address</label> <input type="text" value="7 Houndstooth Rd."></div>
+        <div class="row"><label>City</label> <input type="text" value="London"></div>
+        <div class="row"><label>Region</label> <input type="text"></div>
+        <div class="row"><label>Postal Code</label> <input type="text" value="WG2 7LT"></div>
+        <div class="row">
+            <label>Country</label>
+            <select>
+                <option>Russian Federation</option>
+                <option>Vietnam</option>
+                <option>United Kingdom</option>
+            </select>
+        </div>
+        <div class="row"><label>US Home Phone</label> <input type="text" value="(234)234-2342"></div>
+        <div class="row"><label>Photo</label> <input type="text" value="EmpID9.bmp"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Optional Info</legend>
+        <div class="row" style="align-items: flex-start;">
+            <label>Notes</label>
+            <div class="note-box">
+                <div style="background:#eee; padding:2px; margin-bottom:5px; border-bottom:1px solid #ccc;">
+                    <b>B</b> <i>I</i> <u>S</u> | H1 H2 H3
+                </div>
+                <textarea rows="5" style="border:none; width:100%; outline:none;">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <label>Preferred Shift</label>
+            <div>
+                <input type="checkbox"> Regular <br>
+                <input type="checkbox" checked> Gravy Yard
+            </div>
+        </div>
+        <div class="row">
+            <label>Active?</label>
+            <input type="checkbox" checked>
+        </div>
+        <div class="row">
+            <label>Are you human?</label>
+            <div>
+                <div class="captcha-text">TIDAWO</div><br>
+                <small>Click to change</small><br>
+                <input type="text">
+            </div>
+        </div>
+    </fieldset>
+
+    <div style="border-top: 1px solid #ccc; padding-top: 10px; text-align: right;">
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </div>
+</form>
+
+</body>
+</html>
