@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Quản lý điểm sinh viên</title>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script src="Validation.js"></script>
+
+<style>
+
+table{
+border-collapse: collapse;
+width:600px;
+margin-top:20px;
+}
+
+table,th,td{
+border:1px solid black;
+}
+
+th,td{
+padding:8px;
+text-align:center;
+}
+
+.low{
+background:yellow;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Quản lý điểm sinh viên</h2>
+
+Họ tên
+<input type="text" id="name">
+
+Điểm
+<input type="number" id="score">
+
+<button id="addBtn">Thêm</button>
+<br><br>
+
+Tìm kiếm
+<input type="text" id="search">
+
+Lọc xếp loại
+<select id="filterRank">
+<option value="all">Tất cả</option>
+<option value="Giỏi">Giỏi</option>
+<option value="Khá">Khá</option>
+<option value="Trung bình">Trung bình</option>
+<option value="Yếu">Yếu</option>
+</select>
+
+
+<table>
+
+<thead>
+<tr>
+<th>STT</th>
+<th>Họ tên</th>
+<th id="sortScore">Điểm</th>
+<th>Xếp loại</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+</tbody>
+
+</table>
+
+<p id="stats">
+Tổng SV: 0 | Điểm trung bình: 0
+</p>
+
+</body>
+</html>

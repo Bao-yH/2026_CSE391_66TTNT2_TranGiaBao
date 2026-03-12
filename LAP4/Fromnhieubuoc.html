@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Form đăng ký nhiều bước</title>
+
+<style>
+
+.step{
+display:none;
+}
+
+.step.active{
+display:block;
+}
+
+#progressBar{
+width:100%;
+background:#ddd;
+height:10px;
+margin-bottom:20px;
+}
+
+#progress{
+height:100%;
+width:33%;
+background:green;
+}
+
+.error{
+color:red;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Đăng ký tài khoản</h2>
+
+<div id="progressBar">
+<div id="progress"></div>
+</div>
+
+<p id="stepText">Bước 1 / 3</p>
+
+<form id="multiForm">
+
+<!-- STEP 1 -->
+<div class="step active" id="step1">
+
+<p>
+Họ tên
+<input type="text" id="fullname">
+<span class="error" id="nameError"></span>
+</p>
+
+<p>
+Ngày sinh
+<input type="date" id="dob">
+<span class="error" id="dobError"></span>
+</p>
+
+<p>
+Giới tính
+<input type="radio" name="gender" value="Nam">Nam
+<input type="radio" name="gender" value="Nữ">Nữ
+<span class="error" id="genderError"></span>
+</p>
+
+<button type="button" id="next1">Tiếp theo</button>
+
+</div>
+
+<!-- STEP 2 -->
+<div class="step" id="step2">
+
+<p>
+Email
+<input type="text" id="email">
+<span class="error" id="emailError"></span>
+</p>
+
+<p>
+Mật khẩu
+<input type="password" id="password">
+<span class="error" id="passError"></span>
+</p>
+
+<p>
+Xác nhận mật khẩu
+<input type="password" id="confirm">
+<span class="error" id="confirmError"></span>
+</p>
+
+<button type="button" id="back1">Quay lại</button>
+<button type="button" id="next2">Tiếp theo</button>
+
+</div>
+
+<!-- STEP 3 -->
+<div class="step" id="step3">
+
+<h3>Xác nhận thông tin</h3>
+
+<p id="summary"></p>
+
+<button type="button" id="back2">Quay lại</button>
+<button type="submit">Đăng ký</button>
+
+</div>
+
+</form>
+
+<h3 id="success"></h3>
+
+<script src="Fromnhieubuoc.js"></script>
+
+</body>
+</html>
